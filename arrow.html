@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Page</title>
+    <script src="./Scripts/Common.js"></script>
+    <script>
+        let store=[0,1,2];
+       let ddfunc=()=>{
+            var x = document.getElementById("myList").value;
+            if(x== store[0])
+            {
+                var Laptops = ['LENOVO','HP','DELL','ACER'];
+                document.getElementById("printlist").innerHTML = Laptops.join("<br>");
+            }
+
+             if(x == store[1])
+            {
+                var Mobiles = ['OnePlus','GOOGLE PIXEL', 'OPPO', 'VIVO','REALME'];
+                document.getElementById("printlist").innerHTML = Mobiles.join("<br>");
+            }
+
+            else if(x == store[2])
+            {
+                var TVs = ['PANASONIC','VIDEOCON','LG','LLOYD'];
+                document.getElementById("printlist").innerHTML = TVs.join("<br>");
+            }
+        }
+
+    </script>
+</head>
+<body style="text-align:center">
+    <select id="myList" onchange="ddfunc()">
+        <option >----------select-----------</option>
+        <option value="0">Laptop</option>
+        <option value="1">Mobile</option>
+        <option value="2">TV</option>
+      </select> 
+      <p id="printlist"></p>
+</body>
+</html>
+
